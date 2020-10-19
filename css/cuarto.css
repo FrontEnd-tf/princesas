@@ -1,0 +1,39 @@
+/* CUARTO */
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(4,200px);
+}
+.container__foto {
+    width: 100%;
+    filter: grayscale(100%);
+    cursor: pointer;
+}
+.container__foto:hover{
+    filter: none;
+    transform: scale(1.5);
+    transform-origin: center;
+    z-index: 1;
+    border: 0.5rem solid #eee;
+    box-sizing: border-box;
+    box-shadow: -0.3rem -0.3rem 1rem rgb(72, 72, 72), 0.3rem 0.3rem 1rem rgb(72, 72, 72);
+}
+
+.container__foto--logo {
+    grid-column: 2/span 2;
+    grid-row: 2/span 2;
+    filter: none;
+    cursor: default;
+}
+.container__foto--logo:hover {
+    transform: scale(1);
+    border: 0;
+    box-shadow: none;
+}
+
+
